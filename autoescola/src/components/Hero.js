@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 //import "./Hero.css";
 import styled, { css } from "styled-components";
-import { breakAt, BreakpointSize } from "./Breakpoints";
+import { breakAt, BreakpointSize } from "../styles/Breakpoints";
 
 const colorYellow = "#ffc107";
 
@@ -18,23 +18,6 @@ const Root = styled.div`
   `}
 `;
 
-const Title = styled.h1`
-position:relative
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  &::after{
-      content: "";
-      position : absolute;
-    left: 0;
-    bottom: -3px;
-    background-color: ${colorYellow};
-    height: 5px;
-    width: 70px;
-    }
-  }
-`;
 
 const Content = styled.div`
   p,
@@ -70,10 +53,11 @@ const Container = styled.div`
   }
 `;
 
-const Hero = ({ image, title, children }) => (
+
+const Hero = ({ image, children }) => (
   <Root image={image}>
     <Container>
-      <Title>{title}</Title>
+     
       <Content>{children}</Content>
 
       <button>Matricule-se agora</button>
@@ -83,7 +67,7 @@ const Hero = ({ image, title, children }) => (
 
 Hero.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.string,
+ // title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   children: PropTypes.node,
 };
 
