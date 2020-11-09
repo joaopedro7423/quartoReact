@@ -2,12 +2,13 @@ import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
+import ThemeProvider from "../src/styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <>
     <GlobalStyle />
+<ThemeProvider>{storyFn()}</ThemeProvider>
 
-    {storyFn()}
   </>
 ));
 //Caso se fazer o import das outras views para ver em tablets e telefones e outras caralhas de tela
