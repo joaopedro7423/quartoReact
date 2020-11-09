@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: 2px;
     }
     strong{
-        color: #ffc107;
+        color: ${(props) => props.theme.colors.primary.main};
     }
     h1{
         font-size:2.5rem;
@@ -72,12 +72,12 @@ const GlobalStyleComposed = () => {
   <>
     <GlobalStyle />
     <Helmet>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
-    rel ="stylesheet"
-    />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
-  </>
+  </>;
 };
 
 export default GlobalStyle;
