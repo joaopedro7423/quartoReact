@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 //import "./Hero.css";
 import styled, { css } from "styled-components";
-import { breakAt, BreakpointSize } from "../styles/Breakpoints";
+import { breakAt, BreakpointSize } from "../../styles/Breakpoints";
 
 
 const Root = styled.div`

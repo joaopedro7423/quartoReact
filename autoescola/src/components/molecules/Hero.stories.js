@@ -1,16 +1,16 @@
 import React from "react";
 
-import Hero from "../components/Hero";
-import fundoImage from "./assets/fundo.jpg";
-import fundo2Image from "./assets/user.jpg";
+import Hero from "./Hero";
+import fundoImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/fundo.jpg";
+import fundo2Image from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/user.jpg";
 //import GlobalStyle from "./style/GlobalStyle";
-import Heading from "../components/Heading";
+import Heading from "../atoms/Heading";
 import { text } from '@storybook/addon-knobs'
-import Button from "../components/Button";
+import Button from "../atoms/Button";
  
 
 export default {
-  title: 'Hero',
+  title: 'Components|Molecules/Hero',
   component: Hero,
 };
 
