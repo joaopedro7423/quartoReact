@@ -6,6 +6,7 @@ import fundo2Image from "./assets/user.jpg";
 //import GlobalStyle from "./style/GlobalStyle";
 import Heading from "../components/Heading";
 import { text } from '@storybook/addon-knobs'
+import Button from "../components/Button";
  
 
 export default {
@@ -39,6 +40,7 @@ export const withList = () => (
         sakldjklsak dnm ksamdklmaslmdlkmasmdnmslam klm lasmmlasmdklm alsml m
       </li>
     </ul>
+    <Button color="primary" variant="outlined">Matricule-se agora</Button>
   </Hero>
 
 );

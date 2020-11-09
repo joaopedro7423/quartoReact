@@ -3,8 +3,19 @@ import { ThemeProvider as StyledProvider } from "styled-components";
 
 
 const theme ={
-    //aqui se define a cor e manda lá na função button dos components
-    colorYellow: "#ffc107",
+    colors:{
+        primary:{
+            main:"#ffc107",
+            dark:"#c79100",
+            light:"#fff350",
+            text:"#212121",
+        },
+        danger:{
+            main:"#ff3d00",
+            dark:"#b22a00",
+            text:"#212121",
+        },
+    },
   };
   
 
