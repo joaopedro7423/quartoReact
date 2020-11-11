@@ -9,6 +9,8 @@ import Grid from "../atoms/Grid";
 import Feature from "../atoms/Feature";
 import Footer from "../organisms/Footer";
 import ProductGrid from "../organisms/ProductGrid";
+import Accordion from "../atoms/Accordion";
+import AccordionGroup from "../atoms/AccordionGroup";
 
 import AboutVideo from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/about.mp4";
 import HeroImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/user.jpg";
@@ -26,31 +28,31 @@ const products = [
   {
     id: 1,
     title: "Edinaldo Pereira",
-    sumary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
+    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
     image: PlaceholderImage,
   },
   {
     id: 2,
     title: "Sabe vuá?",
-    sumary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
+    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
     image: PlaceholderImage2,
   },
   {
     id: 3,
     title: "Singarro da curse",
-    sumary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
+    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
     image: PlaceholderImage3,
   },
   {
     id: 4,
     title: "Edinaldo de novo",
-    sumary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
+    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
     image: PlaceholderImage,
   },
   {
     id: 5,
     title: "asdasd",
-    sumary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
+    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
     image: PlaceholderImage3,
   },
 ];
@@ -122,6 +124,25 @@ const Home = () => (
       <Heading>
         <h2>Duvidas recorrentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="Como eu espanco um e-gril na porrada">
+          dasklkdaskdk saidhasdnhas nsdanhunhsauinduilnasuilndiuasilubfilua siub
+          ibfasi uisbaibfiasb ibf isbabf ibasifbasib fibasibfi bdaskbgfads bbasb
+          saidjjasdm inmaisnd judeu asdnklasnln
+        </Accordion>
+
+        <Accordion title="Como escapar do meu agiota?">
+          dasklkdaskdk saidhasdnhas nsdanhunhsauinduilnasuilndiuasilubfilua siub
+          ibfasi uisbaibfiasb ibf isbabf ibasifbasib fibasibfi bdaskbgfads bbasb
+          saidjjasdm inmaisnd kkk me lasquei nessa asdnklasnln
+        </Accordion>
+
+        <Accordion title="ser Veveco por 20 conto da lucro?">
+          dasklkdaskdk saidhasdnhas nsdanhunhsauinduilnasuilndiuasilubfilua siub
+          ibfasi uisbaibfiasb ibf isbabf ibasifbasib fibasibfi bdaskbgfads bbasb
+          saidjjasdm inmaisnd renda extra po, confia asdnklasnln
+        </Accordion>
+      </AccordionGroup>
     </Section>
 
     <Footer></Footer>
