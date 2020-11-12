@@ -22,27 +22,31 @@ const StyledBody = styled.div`
 export const CardBody = ({ children }) => <StyledBody>{children}</StyledBody>;
 
 CardBody.defaulProps = {
-    children: undefined,
+  children: undefined,
 };
 CardBody.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };
 
-
 const StyledMedia = styled.div`
+  display: flex;
   background-image: url(${(props) => props.image});
   background-position: center center;
   background-size: cover;
   height: 270px;
 `;
 
-export const CardMedia = ({ image }) => <StyledMedia image={image} />;
+export const CardMedia = ({ image, children }) => (
+  <StyledMedia image={image}> {children} </StyledMedia>
+);
 
 CardMedia.defaulProps = {
-    image: undefined,
+  image: undefined,
+  children: undefined,
 };
 CardMedia.propTypes = {
-    image: PropTypes.string,
+  image: PropTypes.string,
+  children: PropTypes.node,
 };
 
 const StyledCard = styled.div`
@@ -52,13 +56,39 @@ const StyledCard = styled.div`
 
 const Card = ({ children }) => <StyledCard>{children}</StyledCard>;
 
-
-
 Card.defaulProps = {
-    children: undefined,
+  children: undefined,
 };
 Card.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default Card;
+
+const StyledMediaDescription = styled.div`
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  color: #fff;
+  align-self: flex-end;
+  flex: 1;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin: 0;
+  }
+`;
+
+export const CardMediaDescription = ({ children }) => (
+  <StyledMediaDescription>{children}</StyledMediaDescription>
+);
+
+CardMediaDescription.defaulProps = {
+  children: undefined,
+};
+CardMediaDescription.propTypes = {
+  children: PropTypes.node,
+};

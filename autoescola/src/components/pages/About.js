@@ -6,9 +6,16 @@ import Heading from "../atoms/Heading";
 import Section from "../molecules/Section";
 import Grid from "../atoms/Grid";
 import Footer from "../organisms/Footer";
+import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
 
 import fundo from "../../../src/assets/dogefundo.jpg";
 import AboutImage from "../../draws/About";
+import InstImage1 from "../../assets/instructors/gilesfirra.jpg";
+import InstImage2 from "../../assets/instructors/joselito.jpg";
+import InstImage3 from "../../assets/instructors/mikewozoos.jpg";
+import InstImage4 from "../../assets/instructors/to_bravo.jpg";
+import InstImage5 from "../../assets/instructors/totriste.jpeg";
+import InstImage6 from "../../assets/instructors/morrediabo.jpg";
 
 import styled from "styled-components";
 
@@ -20,6 +27,15 @@ const ImageContainer = styled.div`
     color: ${(props) => props.theme.colors.primary.main};
   }
 `;
+
+const instructors = [
+  {id:1,name: "Gill",avatar:InstImage1},
+  {id:2,name: "Joselito",avatar:InstImage2},
+  {id:3,name: "Mike Wozooz",avatar:InstImage3},
+  {id:4,name: "To brabo",avatar:InstImage4},
+  {id:5,name: "Meu pai me mata",avatar:InstImage5},
+  {id:6,name: "Morre DIABO",avatar:InstImage6},
+];
 
 const About = () => (
   <>
@@ -93,8 +109,18 @@ const About = () => (
     <Section>
         <Heading>
             <h2>Conheça os nussu profisso kkk perdemo</h2>
-
         </Heading>
+        <Grid sm={2} md={3} lg={4}>
+          {instructors.map((instructor)=>(
+            <Card key={instructor.id}>
+              <CardMedia image={instructor.avatar}>
+                <CardMediaDescription>
+                  {instructor.name}
+                </CardMediaDescription>
+              </CardMedia>
+            </Card>
+          ))}
+        </Grid>
     </Section>
     <Footer />
   </>
