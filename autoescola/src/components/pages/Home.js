@@ -18,8 +18,6 @@ import HeroImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/u
 import PlaceholderImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
 import PlaceholderImage2 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/mineirinho.jpg";
 import PlaceholderImage3 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/miranha.jpg";
-import PlaceholderImage4 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
-import PlaceholderImage5 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
 
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "../molecules/Section";
