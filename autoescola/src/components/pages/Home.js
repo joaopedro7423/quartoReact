@@ -16,47 +16,13 @@ import AccordionGroup from "../atoms/AccordionGroup";
 import AboutVideo from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/about.mp4";
 import HeroImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/user.jpg";
 
-import PlaceholderImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
-import PlaceholderImage2 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/mineirinho.jpg";
-import PlaceholderImage3 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/miranha.jpg";
+import ProductType from "../../types/ProductType";
 
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "../molecules/Section";
 
-const products = [
-  {
-    id: 1,
-    title: "Edinaldo Pereira",
-    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
-    image: PlaceholderImage,
-  },
-  {
-    id: 2,
-    title: "Sabe vuá?",
-    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
-    image: PlaceholderImage2,
-  },
-  {
-    id: 3,
-    title: "Singarro da curse",
-    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
-    image: PlaceholderImage3,
-  },
-  {
-    id: 4,
-    title: "Edinaldo de novo",
-    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
-    image: PlaceholderImage,
-  },
-  {
-    id: 5,
-    title: "asdasd",
-    summary: "asdmk msjadjlsaldnmasl ldsaldlkmaskmdlkmasmdlmkas asd",
-    image: PlaceholderImage3,
-  },
-];
 
-const Home = () => (
+const Home = ({products}) => (
   <>
   
     <Hero image={HeroImage}>
@@ -149,7 +115,11 @@ const Home = () => (
   </>
 );
 
-//Home.defaulProps ={};
-//Home.PropTypes ={};
+Home.defaulProps ={
+  products: []
+};
+Home.PropTypes ={
+  products: PropTypes.arrayOf(ProductType)
+};
 
 export default Home;

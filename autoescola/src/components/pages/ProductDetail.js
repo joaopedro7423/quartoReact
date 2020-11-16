@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
-
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
 import Section from "../molecules/Section";
@@ -22,6 +20,7 @@ import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
 import fundo from "../../../src/assets/dogefundo.jpg";
 import styled from "styled-components";
+import ProductType from "../../types/ProductType";
 
 const PinnedList = styled.ul`
   list-style: none;
@@ -35,24 +34,23 @@ const PinnedItem = styled.li`
   padding: 8px 16px;
   margin: 0 16px 16px 0;
 
-svg{
+  svg {
     margin-right: 8px;
     vertical-align: middle;
-}
-
+  }
 `;
 
-const ProductDetail = () => (
+const ProductDetail = ({ product }) => (
   <>
     <Hero image={fundo}>
       <Heading>
-        <h1>Nome do Serviço</h1>
+        <h1>{product.title}</h1>
       </Heading>
-      <BreadCrumb 
+      <BreadCrumb
         items={[
-          {label: "Início", link: "/"},
-          {label: "Serviços", link: "/servicos"},
-          {label: "Nome do Serviço"},
+          { label: "Início", link: "/" },
+          { label: "Serviços", link: "/servicos" },
+          { label: product.title },
         ]}
       />
     </Hero>
@@ -114,8 +112,12 @@ const ProductDetail = () => (
     </Section>
   </>
 );
-  
-ProductDetail.defaulProps = {};
-ProductDetail.propTypes = {};
+
+ProductDetail.defaulProps = {
+  product: {},
+};
+ProductDetail.propTypes = {
+  product: ProductType,
+};
 
 export default ProductDetail;

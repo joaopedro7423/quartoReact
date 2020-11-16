@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import PropTypes from "prop-types";
+import PropTypes, { arrayOf } from "prop-types";
 import {Link} from "react-router-dom";
 
 import {useScrollToTop} from "../../hooks/scroll";
@@ -9,6 +9,9 @@ import Card, { CardMedia, CardBody } from "../atoms/Card";
 import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 import styled from "styled-components";
+
+
+import ProductType from "../../types/ProductType";
 
 
 
@@ -36,7 +39,9 @@ const ProductGrid = ({products}) => {
           </Heading>
               <p>{product.summary}</p>
           <div>
-            <Button as={Link} to="/servicos" color="primary" variant="link">
+            <Button as={Link} 
+            to={`/servicos/${product.slang}`} //passagem com parametro dale na tecnologia
+            color="primary" variant="link">
               Saiba mais
             </Button>
           </div>
@@ -61,13 +66,7 @@ ProductGrid.defaulProps = {
 };
 ProductGrid.propTypes = {
     products: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.number,PropTypes.string]),
-            image:PropTypes.string,
-            title:PropTypes.string,
-            summary: PropTypes.string,
-        })
-
+ ProductType
     ),
     
 };
