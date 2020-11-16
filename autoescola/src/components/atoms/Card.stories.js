@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card, { CardBody, CardMedia } from "./Card";
+import Card, { CardBody, CardMedia, CardMediaDescription } from "./Card";
 import Section from "../molecules/Section";
 
 import Heading from "../atoms/Heading";
@@ -12,7 +12,7 @@ import PlaceholderImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/s
 export default {
   title: "Components|Atoms/Card",
   component: Card,
-  subcomponents: {CardBody, CardMedia},
+  subcomponents: {CardBody, CardMedia, CardMediaDescription},
 };
 
 export const usage = () => (
@@ -48,6 +48,18 @@ export const withMedia = () => (
           </Button>
         </div>
       </CardBody>
+    </Card>
+  </Section>
+);
+
+export const onlyMedia = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={PlaceholderImage}>
+      <CardMediaDescription>
+        <h2>sadasd</h2>
+      </CardMediaDescription>
+      </CardMedia>
     </Card>
   </Section>
 );

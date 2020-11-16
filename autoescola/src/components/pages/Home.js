@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 import GlobalStyle from "C:/Users/user/Desktop/quartoReact/autoescola/src/styles/GlobalStyle.js";
 import Hero from "../molecules/Hero";
@@ -18,8 +19,6 @@ import HeroImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/u
 import PlaceholderImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
 import PlaceholderImage2 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/mineirinho.jpg";
 import PlaceholderImage3 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/miranha.jpg";
-import PlaceholderImage4 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
-import PlaceholderImage5 from "C:/Users/user/Desktop/quartoReact/autoescola/src/stories/assets/edinaldo.jpg";
 
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "../molecules/Section";
@@ -59,6 +58,7 @@ const products = [
 
 const Home = () => (
   <>
+  
     <Hero image={HeroImage}>
       <Heading>
         <h1>
@@ -112,7 +112,7 @@ const Home = () => (
             a escola para que um dia tenha uma escola para elcola novas escolas
           </p>
           <div>
-            <Button color="primary">Saiba Mais</Button>
+            <Button as={Link} to="/sobre" color="primary">Saiba Mais</Button>
           </div>
         </div>
         <div>

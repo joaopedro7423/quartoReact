@@ -4,15 +4,18 @@
   "private": true,
   "dependencies": {
     "@storybook/addon-knobs": "^6.0.28",
+    "@svgr/cli": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "history": "^5.0.0",
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
+    "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
@@ -23,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
-    "build-storybook": "build-storybook -s public --no-dll"
+    "build-storybook": "build-storybook -s public --no-dll",
+    "svg": "svgr --icon --replace-attr-values '#ffc107=currentColor' -d src/draws/ "
   },
   "eslintConfig": {
     "extends": [
