@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import {useScrollToTop} from "../../hooks/scroll";
+
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -42,9 +42,7 @@ svg{
 
 `;
 
-const ProductDetail = () => {
-  useScrollToTop();
-  return(
+const ProductDetail = () => (
   <>
     <Hero image={fundo}>
       <Heading>
@@ -116,7 +114,7 @@ const ProductDetail = () => {
     </Section>
   </>
 );
-  }
+  
 ProductDetail.defaulProps = {};
 ProductDetail.propTypes = {};
 
