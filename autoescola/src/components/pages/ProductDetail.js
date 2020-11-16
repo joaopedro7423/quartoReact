@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import {useScrollToTop} from "../../hooks/scroll";
+
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
 import Section from "../molecules/Section";
@@ -14,6 +16,7 @@ import Callout, {
 } from "../atoms/Callout";
 import Button from "../atoms/Button";
 import SpeedImage from "../../draws/Speed";
+import BreadCrumb from "../atoms/BreadCrumb";
 
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
@@ -39,12 +42,21 @@ svg{
 
 `;
 
-const ProductDetail = () => (
+const ProductDetail = () => {
+  useScrollToTop();
+  return(
   <>
     <Hero image={fundo}>
       <Heading>
         <h1>Nome do Serviço</h1>
       </Heading>
+      <BreadCrumb 
+        items={[
+          {label: "Início", link: "/"},
+          {label: "Serviços", link: "/servicos"},
+          {label: "Nome do Serviço"},
+        ]}
+      />
     </Hero>
     <Section>
       <p>
@@ -104,6 +116,7 @@ const ProductDetail = () => (
     </Section>
   </>
 );
+  }
 ProductDetail.defaulProps = {};
 ProductDetail.propTypes = {};
 

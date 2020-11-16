@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 import GlobalStyle from "C:/Users/user/Desktop/quartoReact/autoescola/src/styles/GlobalStyle.js";
 import Hero from "../molecules/Hero";
@@ -57,6 +58,7 @@ const products = [
 
 const Home = () => (
   <>
+  
     <Hero image={HeroImage}>
       <Heading>
         <h1>
@@ -110,7 +112,7 @@ const Home = () => (
             a escola para que um dia tenha uma escola para elcola novas escolas
           </p>
           <div>
-            <Button color="primary">Saiba Mais</Button>
+            <Button as={Link} to="/sobre" color="primary">Saiba Mais</Button>
           </div>
         </div>
         <div>
