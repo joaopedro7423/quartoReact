@@ -23,7 +23,7 @@ text-align: center;
 const ProductGrid = ({products}) => {
     //isso serve para mostrar 3, caso clike no botao é mostrado todos
     const [showAll, setShowAll] = useState(false);
-    const filteredProducts = showAll ? products: products.slice(0, 3);
+    const filteredProducts = showAll ? products: products.slice(0,3);
 
     return (
     <>
