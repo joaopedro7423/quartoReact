@@ -7,7 +7,7 @@ import {useScrollToTop} from "../hooks/scroll";
 
 const About = () => {
     
-  useScrollToTop();
+  useScrollToTop(); 
 
     return <AboutPage />
 }

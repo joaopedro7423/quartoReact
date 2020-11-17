@@ -4,7 +4,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 
 import ThemeProvider from "./styles/ThemeProvider";
 import GlobalStyle from "./styles/GlobalStyle";
-
+ 
 import Routes from "../src/routes/index"
 
 function App() {

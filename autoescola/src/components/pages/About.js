@@ -42,8 +42,6 @@ const instructors = [
 
  
 const About = () => (
- 
-  
     <>
       <Hero image={fundo}>
         <Heading>

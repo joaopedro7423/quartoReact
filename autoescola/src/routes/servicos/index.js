@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams} from 'react-router-dom';
-
+ 
 import ProductDetailPage from "../../components/pages/ProductDetail";
 
 import {useScrollToTop} from "../../hooks/scroll";

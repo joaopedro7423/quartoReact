@@ -20,7 +20,8 @@ import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
 import fundo from "../../../src/assets/dogefundo.jpg";
 import styled from "styled-components";
-import ProductType from "../../types/ProductType";
+
+import ProductType from "../../models/types/ProductType";
 
 const PinnedList = styled.ul`
   list-style: none;

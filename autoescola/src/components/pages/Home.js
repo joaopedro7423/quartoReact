@@ -16,7 +16,7 @@ import AccordionGroup from "../atoms/AccordionGroup";
 import AboutVideo from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/about.mp4";
 import HeroImage from "C:/Users/user/Desktop/quartoReact/autoescola/src/assets/user.jpg";
 
-import ProductType from "../../types/ProductType";
+import ProductType from "../../models/types/ProductType";
 
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "../molecules/Section";
@@ -118,7 +118,7 @@ const Home = ({products}) => (
 Home.defaulProps ={
   products: []
 };
-Home.PropTypes ={
+Home.propTypes ={
   products: PropTypes.arrayOf(ProductType)
 };
 

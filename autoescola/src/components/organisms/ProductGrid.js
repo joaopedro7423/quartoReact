@@ -11,7 +11,7 @@ import Button from "../atoms/Button";
 import styled from "styled-components";
 
 
-import ProductType from "../../types/ProductType";
+import ProductType from "../../models/types/ProductType";
 
 
 
@@ -24,8 +24,6 @@ const ProductGrid = ({products}) => {
     //isso serve para mostrar 3, caso clike no botao é mostrado todos
     const [showAll, setShowAll] = useState(false);
     const filteredProducts = showAll ? products: products.slice(0, 3);
-   
-
 
     return (
     <>
