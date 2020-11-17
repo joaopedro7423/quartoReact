@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import PropTypes from "prop-types";
+import PropTypes, { arrayOf } from "prop-types";
 import {Link} from "react-router-dom";
 
 import {useScrollToTop} from "../../hooks/scroll";
@@ -11,6 +11,9 @@ import Button from "../atoms/Button";
 import styled from "styled-components";
 
 
+import ProductType from "../../models/types/ProductType";
+
+
 
 const Toolbar = styled.div`
 margin-top: 40px;
@@ -20,9 +23,7 @@ text-align: center;
 const ProductGrid = ({products}) => {
     //isso serve para mostrar 3, caso clike no botao é mostrado todos
     const [showAll, setShowAll] = useState(false);
-    const filteredProducts = showAll ? products: products.slice(0, 3);
-   
-
+    const filteredProducts = showAll ? products: products.slice(0,3);
 
     return (
     <>
@@ -36,7 +37,9 @@ const ProductGrid = ({products}) => {
           </Heading>
               <p>{product.summary}</p>
           <div>
-            <Button as={Link} to="/servicos" color="primary" variant="link">
+            <Button as={Link} 
+            to={`/servicos/${product.slang}`} //passagem com parametro dale na tecnologia
+            color="primary" variant="link">
               Saiba mais
             </Button>
           </div>
@@ -61,13 +64,7 @@ ProductGrid.defaulProps = {
 };
 ProductGrid.propTypes = {
     products: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.number,PropTypes.string]),
-            image:PropTypes.string,
-            title:PropTypes.string,
-            summary: PropTypes.string,
-        })
-
+ ProductType
     ),
     
 };

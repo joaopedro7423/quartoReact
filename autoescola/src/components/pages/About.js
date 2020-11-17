@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import {useScrollToTop} from "../../hooks/scroll";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -42,11 +41,7 @@ const instructors = [
 
 
  
-const About = () => {
- 
-  useScrollToTop();
-
-  return (
+const About = () => (
     <>
       <Hero image={fundo}>
         <Heading>
@@ -143,7 +138,7 @@ const About = () => {
       <Footer />
     </>
   );
-};
+
 
 About.defaulProps = {};
 About.propTypes = {};
